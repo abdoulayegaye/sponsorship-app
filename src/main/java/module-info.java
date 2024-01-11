@@ -2,7 +2,8 @@ module sn.dev.sponsorshipapp {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-    requires lombok;
+    requires static lombok;
+    requires TrayNotification;
 
     opens sn.dev.sponsorshipapp to javafx.fxml;
     exports sn.dev.sponsorshipapp;

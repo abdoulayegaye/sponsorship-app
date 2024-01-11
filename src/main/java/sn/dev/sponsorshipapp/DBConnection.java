@@ -11,14 +11,13 @@ public class DBConnection {
     private ResultSet rs;
     private int ok;
 
-    public void getConnection(){
+    private void getConnection(){
         String url = "jdbc:mysql://localhost:3306/sponsorship_db";
         String user = "root";
         String password = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             cnx = DriverManager.getConnection(url, user, password);
-            System.out.println("Connexion réussie !");
         }catch (Exception ex){
             ex.printStackTrace();
         }
